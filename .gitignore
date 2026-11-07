@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Datos generados
+data/cache/
+data/portraits/
+data/roster.json
+data/rois.json
+data/grid.json
+output/
+*.pdf
+
+# Capturas de depuracion
+*.png
+!assets/anchors/*.png

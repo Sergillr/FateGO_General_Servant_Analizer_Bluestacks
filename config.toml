@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# FGO Servant Analyzer - configuracion
+# ---------------------------------------------------------------------------
+# Todo esta pensado para BlueStacks 5, FGO NA (ingles), 1920x1080.
+# Si cambias la resolucion del emulador tienes que recalibrar TODO.
+
+[adb]
+# BlueStacks: Ajustes > Avanzado > Puente de depuracion Android (ADB) = ON
+host = "127.0.0.1"
+port = 5555
+# Vacio = autodeteccion (PATH, BlueStacks_nxt, Android SDK)
+adb_path = ""
+
+[device]
+width = 1920
+height = 1080
+dpi = 240
+language = "en"
+
+[scan]
+action_delay = 0.6      # pausa base entre acciones (segundos)
+jitter = 0.25           # variacion aleatoria +/- para no ser robotico
+scroll_pause = 1.0      # pausa tras hacer scroll
+max_scrolls = 60        # tope de seguridad al recorrer la lista
+settle_timeout = 6.0    # espera maxima a que la pantalla se estabilice
+settle_interval = 0.25
+
+[list]
+# Rejilla de la pantalla "Select Servant" (Formation > Party Setup > slot).
+# Coordenadas del CENTRO de la primera tarjeta y separacion entre tarjetas.
+cols = 6
+rows = 3
+x0 = 250
+y0 = 460
+dx = 300
+dy = 300
+
+[atlas]
+region = "NA"
+base_url = "https://api.atlasacademy.io"
+
+[report]
+title = "Fate/Grand Order - Servant Report"
+author = "FGO Servant Analyzer"
+
+[rois]
+# Zonas (x, y, ancho, alto) en pixeles sobre 1920x1080.
+# ESTOS VALORES SON PLACEHOLDERS: calibralos con
+#   python tools/calibrate.py roi <campo>
+# o editalos a mano aqui. data/rois.json tiene prioridad sobre este archivo.
+name       = [420, 90, 700, 70]
+level      = [1300, 300, 180, 50]
+max_level  = [1490, 300, 120, 50]
+np_level   = [1300, 420, 180, 50]
+bond       = [1300, 540, 180, 50]
+fou_atk    = [1300, 660, 180, 50]
+fou_hp     = [1300, 720, 180, 50]
+skill_1    = [560, 850, 120, 60]
+skill_2    = [760, 850, 120, 60]
+skill_3    = [960, 850, 120, 60]
+append_1   = [560, 960, 120, 60]
+append_2   = [760, 960, 120, 60]
+append_3   = [960, 960, 120, 60]
+portrait   = [60, 120, 640, 800]
